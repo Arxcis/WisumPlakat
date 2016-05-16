@@ -1,0 +1,90 @@
+{% extends "WisumPlakat/header.html" %}
+
+{% block content %}
+    
+    <!-- LOCAL javascript -->
+    <script type="text/javascript" src="static/home.js"></script>
+            
+        <div class="mainwrap">
+
+                <div class="mainmenu">
+                    <h2>Brukernavn</h2>
+                    <br/>
+                    <h2>Poster menu</h2>
+                    <ul>
+                        <li onClick="switchPoster(1)">Poster nr 1</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="editorwrap">
+                    <div class="editheader">
+                        <h1> Poster editor</h1>
+                        <h1 id="debuginfo"></h1>
+
+
+                    </div>
+
+
+                    <div class="editbody">
+                        <div class="editwindow">
+
+                            {% include "WisumPlakat/poster1.html" %}
+
+                        </div>
+
+                        <div class="toolmenu">
+                            <h3 class="smallheader">Styling menu</h3>
+
+                                <div onClick="selectMe(this)" style="font-size: 12px;">Size 12px</div>
+                                <div onClick="selectMe(this)" style="font-size: 20px;">Size 20px</div>
+                                <div onClick="selectMe(this)" style="font-size: 30px;">Size 30px</div>
+                                <div onClick="selectMe(this)" style="color:red;">Red</div>
+                                <div onClick="selectMe(this)" style="color:blue;">Blue</div>
+                                <div onClick="selectMe(this)" style="color:grey;">Grey</div>
+                                <div onClick="selectMe(this)" style="font-family: "Times New Roman";">Times New Roman</div>
+                                <div onClick="selectMe(this)" style="font-family: Georgia;">Georgia</div>
+                                <div onClick="selectMe(this)" style="font-family: Serif;">Serif</div>
+                                <div onClick="selectMe(this)" style="font-family: Calibri;">Calibri</div>
+
+                        </div>
+
+                        <div class="objectmenu">
+                            <h3 class="smallheader">Object menu</h3>
+                            
+                            <div class="objectwrapper">
+                                <div class="inherit textobject" onClick="selectMe(this)">
+                                    Eksempel overskrift
+                                </div>
+                                <div class="inherit textobject" onClick="selectMe(this)">
+                                    Lorem ipsum crucifixus et cantibilae. Suum in Israel.
+                                </div>
+                                <div class="inherit imageobject" onClick="selectMe(this)">
+                                    <img src="static/images/image1.jpg"/>
+                                </div>
+                                <div class="inherit imageobject" onClick="selectMe(this)">
+                                    <img src="static/images/image2.jpg"/></div>
+
+                                <div class="inherit iconobject" onClick="selectMe(this)">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                                <div class="inherit iconobject" onClick="selectMe(this)">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </div>
+                                <div class="inherit newobject" onClick="selectMe(this)">
+                                    +Add object
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+
+
+{% endblock %}
+
+

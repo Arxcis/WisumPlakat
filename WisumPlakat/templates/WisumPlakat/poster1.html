@@ -1,0 +1,37 @@
+
+<!-- MAL på hvordan en POSTER template skal se ut -->
+
+<!-- Her brukes bare absolutte lengdemål -->
+
+<!-- Containere som en ønsker at brukeren skal kunne endre på
+       merkes med en av følgende klasser: 
+         class="textholder" for textinput
+         class="imageholder" for imageinput
+         class="iconholder" for iconinput      --> 
+
+<style>
+    #poster1 {width: 600px; height: 500px; border: 2px solid green;}
+
+    .holder1 {border: inherit; height: 15%;}
+    .holder2 {border: inherit; height: 40%;}
+    .holder3 {border: inherit; height: 35%;}
+    .holder4 {border:inherit; height: 10%; display:flex;}
+    .iconholder {border: inherit; flex: 1;}
+
+</style>
+
+<div id="poster1">
+
+    <div  class="holder1 textholder">Insert text</div>
+    <div  class="holder2 imageholder">Insert image</div>
+    <div  class="holder3 imageholder">Insert image</div>
+    <div class="holder4">
+        
+        <div class="iconholder">Icon</div>
+        <div class="iconholder">Icon</div>
+        <div class="iconholder">Icon</div>
+        <div class="iconholder">Icon</div>
+
+    </div>
+
+</div>
